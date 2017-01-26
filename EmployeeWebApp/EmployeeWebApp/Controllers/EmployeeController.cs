@@ -116,7 +116,7 @@ namespace EmployeeWebApp.Controllers
             }
             logger.Warn("User: {0} does not have an associated employee", User.Identity.Name.ToString());
             Response.StatusCode = 404;
-            return Content("No employee exists for this identity.");
+            return RedirectToAction("Login", "Account");
         }
 
         public ActionResult Upload()

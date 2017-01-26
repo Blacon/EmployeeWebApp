@@ -50,3 +50,22 @@
 2017/01/26 19:30:59.278: User facebook@gmai.com was not authorized to view Employee/Read and was redirected to siad users details.
 2017/01/26 19:30:59.289: User facebook@gmai.com checking their details.
 2017/01/26 19:31:02.305: Checking if user: facebook@gmai.com has associated employee
+2017/01/26 21:08:01.102: User facebook@gmai.com loaded Employee/Index
+2017/01/26 21:08:01.174: User facebook@gmai.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 21:08:01.185: User facebook@gmai.com checking their details.
+2017/01/26 21:08:01.217: Checking if user: facebook@gmai.com has associated employee
+2017/01/26 21:11:36.460: User edison@gmail.com loaded Employee/Index
+2017/01/26 21:11:36.482: User edison@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 21:11:36.491: User edison@gmail.com checking their details.
+2017/01/26 21:11:36.507: Checking if user: edison@gmail.com has associated employee
+2017/01/26 21:11:36.507: User: edison@gmail.com does not have an associated employee
+2017/01/26 21:13:00.218: User edison@gmail.com loaded Employee/Index
+2017/01/26 21:13:00.279: User edison@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 21:13:00.290: User edison@gmail.com checking their details.
+2017/01/26 21:13:02.094: Checking if user: edison@gmail.com has associated employee
+2017/01/26 21:13:02.094: User: edison@gmail.com does not have an associated employee
+2017/01/26 21:13:06.019: User edison@gmail.com loaded Employee/Index
+2017/01/26 21:13:06.019: User edison@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 21:13:06.019: User edison@gmail.com checking their details.
+2017/01/26 21:13:06.036: Checking if user: edison@gmail.com has associated employee
+2017/01/26 21:13:06.036: User: edison@gmail.com does not have an associated employee

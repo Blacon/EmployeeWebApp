@@ -185,7 +185,7 @@ namespace EmployeeWebApp.Controllers
 
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Employee");
                 }
                 AddErrors(result);
             }
@@ -417,7 +417,7 @@ namespace EmployeeWebApp.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Employee");
         }
 
         //
@@ -474,7 +474,7 @@ namespace EmployeeWebApp.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Employee");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
