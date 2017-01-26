@@ -1,0 +1,39 @@
+2017/01/26 13:58:17.232: User potato@gmail.com loaded Employee/Index
+2017/01/26 13:58:17.515: User potato@gmail.com was authorized to view Employee/Read.
+2017/01/26 14:55:18.301: User edison@gmail.com loaded Employee/Index
+2017/01/26 14:55:18.500: User edison@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 14:55:18.518: User edison@gmail.com checking their details.
+2017/01/26 14:55:20.675: Checking if user: edison@gmail.com has associated employee
+2017/01/26 14:55:20.676: User: edison@gmail.com does not have an associated employee
+2017/01/26 14:55:29.853: User edison@gmail.com loaded Employee/Index
+2017/01/26 14:55:29.871: User edison@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 14:55:29.890: User edison@gmail.com checking their details.
+2017/01/26 14:55:29.906: Checking if user: edison@gmail.com has associated employee
+2017/01/26 14:55:29.906: User: edison@gmail.com does not have an associated employee
+2017/01/26 14:55:42.624: User edison@gmail.com loaded Employee/Index
+2017/01/26 14:55:42.645: User edison@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 14:55:42.665: User edison@gmail.com checking their details.
+2017/01/26 14:55:42.689: Checking if user: edison@gmail.com has associated employee
+2017/01/26 14:55:42.689: User: edison@gmail.com does not have an associated employee
+2017/01/26 15:15:10.645: User edison@gmail.com loaded Employee/Index
+2017/01/26 15:15:10.875: User edison@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 15:15:10.895: User edison@gmail.com checking their details.
+2017/01/26 15:15:13.379: Checking if user: edison@gmail.com has associated employee
+2017/01/26 15:15:13.379: User: edison@gmail.com does not have an associated employee
+2017/01/26 15:44:42.936: User tets@gmail.com loaded Employee/Index
+2017/01/26 15:44:42.936: User tets@gmail.com loaded Employee/Index
+2017/01/26 15:44:43.082: User tets@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 15:44:43.082: User tets@gmail.com checking their details.
+2017/01/26 15:44:45.049: Checking if user: tets@gmail.com has associated employee
+2017/01/26 15:46:00.458: User tets@gmail.com loaded Employee/Index
+2017/01/26 15:46:00.515: User tets@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 15:46:00.523: User tets@gmail.com checking their details.
+2017/01/26 15:46:02.049: Checking if user: tets@gmail.com has associated employee
+2017/01/26 16:07:43.105: User g@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 16:07:43.135: User g@gmail.com checking their details.
+2017/01/26 16:07:43.153: Checking if user: g@gmail.com has associated employee
+2017/01/26 16:09:11.889: User g@gmail.com checking their details.
+2017/01/26 16:09:11.889: Checking if user: g@gmail.com has associated employee
+2017/01/26 16:10:17.499: User g@gmail.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 16:10:17.507: User g@gmail.com checking their details.
+2017/01/26 16:10:17.507: Checking if user: g@gmail.com has associated employee

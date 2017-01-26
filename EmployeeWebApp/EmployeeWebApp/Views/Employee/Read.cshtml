@@ -1,0 +1,79 @@
+﻿<h2>Employee Table</h2><br>
+<div style="width:90%; margin:0 auto;">
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Employee First Name</th>
+                <th>Employee Last Name</th>
+                <th>Net Income</th>
+                <th>Gross Income</th>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <th></th>
+                    <th></th>
+                }
+                
+            </tr>
+        </thead>
+    </table>
+</div>
+<style>
+    tr.even {
+        background-color: #F5F5F5 !important;
+    }
+</style>
+@* Load datatable css *@
+<link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />
+@* Load datatable js *@
+@section Scripts{
+    @if (User.IsInRole("Administrator"))
+    {
+        <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+        <script>
+        $(document).ready(function () {
+
+            $('#myTable').DataTable({
+                "ajax": {
+                    "url": "/employee/loaddata",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns" : [
+                        { "data": "Employee.FirstName", "autoWidth": true },
+                        { "data": "Employee.LastName", "autoWidth": true },
+                        { "data": "Employee.Income", "autoWidth": true, "bSortable": false },
+                        { "data": "GrossIncome", "autoWidth": true, "bSortable": false },
+                        { "data": function (data, type, row, meta) {
+                            return '<a href="Update/' + data.Employee.Id + '">' + "Edit" + '</a>'; } },
+                        { "data": function (data, type, row, meta) {
+                            return '<a href="Delete/' + data.Employee.Id + '">' + "Delete" + '</a>';
+                        } }
+                    ]
+            });
+        });
+        </script>
+    }
+    else
+    {
+        <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready(function () {
+            
+                $('#myTable').DataTable({
+                    "ajax": {
+                        "url": "/employee/loaddata",
+                        "type": "GET",
+                        "datatype": "json"
+                    },
+                    "columns" : [
+                            { "data": "Employee.FirstName", "autoWidth": true },
+                            { "data": "Employee.LastName", "autoWidth": true },
+                            { "data": "Employee.Income", "autoWidth": true, "bSortable": false },
+                            { "data": "GrossIncome", "autoWidth": true, "bSortable": false }
+                        ]
+                });
+            });
+        </script>
+    }
+}
+

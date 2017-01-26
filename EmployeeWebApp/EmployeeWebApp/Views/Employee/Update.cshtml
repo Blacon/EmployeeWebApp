@@ -1,0 +1,73 @@
+﻿@model EmployeeWebApp.Models.Employee
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <h4>Employees @Model.Name current income is: @Model.Income</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.FirstName)
+        @Html.HiddenFor(model => model.LastName)
+        @Html.HiddenFor(model => model.ApplicationUserId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Income,"Change " + Model.Name + " income here:", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Income, new { htmlAttributes = new { @class = "form-control", @onblur = "getValue(this)" } })
+                @Html.ValidationMessageFor(model => model.Income, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+@{
+    <script type="text/javascript">
+        function getValue(element) {
+
+            if (isFloat(element.value)) {
+                document.getElementById('incomeTax').value = (((element.value * 100) / 76) * 0.15).toFixed(2);
+                document.getElementById('healthCareInsurance').value = (((element.value * 100) / 76) * 0.06).toFixed(2);
+                document.getElementById('socialInsurance').value = (((element.value * 100) / 76) * 0.03).toFixed(2);
+                document.getElementById('grossIncome').value = ((element.value * 100) / 76).toFixed(2);
+
+            }
+        }
+
+        function isFloat(val) {
+            var floatRegex = /^[+]?\d+([.]\d+)?$/;
+            if (!floatRegex.test(val))
+                return false;
+
+            val = parseFloat(val);
+            if (isNaN(val))
+                return false;
+            return true;
+        }
+    </script>
+}
+@Html.Label("Income tax(15%): ")
+<input type="text" id="incomeTax" readonly="readonly" class="form-control">
+@Html.Label("Healthcare insurance(6%): ")
+<input type="text" id="healthCareInsurance" readonly="readonly" class="form-control">
+@Html.Label("Social and pension insurance(3%): ")
+<input type="text" id="socialInsurance" readonly="readonly" class="form-control">
+@Html.Label("Total gross income(124%): ")
+<input type="text" id="grossIncome" readonly="readonly" class="form-control">
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

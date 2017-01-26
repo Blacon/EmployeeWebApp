@@ -1,0 +1,10 @@
+﻿@model string
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.Editor("find" , new { htmlAttributes = new { @class = "form-control" } })
+
+    
+}

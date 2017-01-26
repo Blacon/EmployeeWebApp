@@ -1,0 +1,19 @@
+﻿
+
+@using (Html.BeginForm("Upload", "Employee", null, FormMethod.Post,  new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Image</legend>
+        <div class="editor-label">
+            @Html.Label("Upload and work")
+        </div>
+        <div class="editor-field">
+            <input id="img" title="Upload a product image"
+                   type="file" name="file" />
+        </div>
+        <p><input type="submit" value="Create" /></p>
+    </fieldset>
+}
+
