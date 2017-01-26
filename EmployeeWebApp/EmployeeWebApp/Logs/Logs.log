@@ -46,3 +46,7 @@
 2017/01/26 19:24:40.150: User facebook@gmai.com was not authorized to view Employee/Read and was redirected to siad users details.
 2017/01/26 19:24:40.150: User facebook@gmai.com checking their details.
 2017/01/26 19:24:40.162: Checking if user: facebook@gmai.com has associated employee
+2017/01/26 19:30:59.121: User facebook@gmai.com loaded Employee/Index
+2017/01/26 19:30:59.278: User facebook@gmai.com was not authorized to view Employee/Read and was redirected to siad users details.
+2017/01/26 19:30:59.289: User facebook@gmai.com checking their details.
+2017/01/26 19:31:02.305: Checking if user: facebook@gmai.com has associated employee

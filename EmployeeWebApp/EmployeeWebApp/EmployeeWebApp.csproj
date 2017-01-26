@@ -296,7 +296,6 @@
     <Content Include="Views\Employee\Search.cshtml" />
     <Content Include="Views\Employee\Update.cshtml" />
     <Content Include="Views\Employee\Details.cshtml" />
-    <Content Include="Views\Account\Upload.cshtml" />
     <Content Include="Views\Employee\Upload.cshtml" />
   </ItemGroup>
   <ItemGroup />
