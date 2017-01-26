@@ -138,12 +138,6 @@ namespace EmployeeWebApp.Controllers
             }
         }
 
-        [AllowAnonymous]
-        public ActionResult Upload()
-        {
-            return View(new RegisterViewModel());
-        }
-        //
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
