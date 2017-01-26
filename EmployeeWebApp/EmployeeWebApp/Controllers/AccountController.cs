@@ -168,28 +168,22 @@ namespace EmployeeWebApp.Controllers
                 {
                     //Adding new employee to the database, should move database functions to a seperate file or method?
 
-                    var newFileName = "";
-                    var imagePath = "";
+                    //var newFileName = "";
+                    //var imagePath = "";
 
-                    if (file != null)
-                    {
-                        newFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
-                        imagePath = @"\Images\" + newFileName;
-                        file.SaveAs(HttpContext.Server.MapPath("~/Images/") + newFileName);
+                    //if (file != null)
+                    //{
+                    //    newFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
+                    //    imagePath = @"\Images\" + newFileName;
+                    //    file.SaveAs(HttpContext.Server.MapPath("~/Images/") + newFileName);
 
-                    }
+                    //}
 
                     var service = new EmployeeService(HttpContext.GetOwinContext().Get<ApplicationDbContext>());
-                    service.CreateEmployee(model.Name, model.Surname, user.Id, imagePath);
+                    service.CreateEmployee(model.Name, model.Surname, user.Id, null);
 
 
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     return RedirectToAction("Index", "Home");
                 }
