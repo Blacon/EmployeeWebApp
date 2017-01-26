@@ -160,24 +160,18 @@ namespace EmployeeWebApp.Controllers
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
 
-
-                
-
-
                 if (result.Succeeded)
                 {
-                    //Adding new employee to the database, should move database functions to a seperate file or method?
+                    var newFileName = "";
+                    var imagePath = "";
 
-                    //var newFileName = "";
-                    //var imagePath = "";
+                    if (file != null)
+                    {
+                        newFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
+                        imagePath = @"\Images\" + newFileName;
+                        file.SaveAs(HttpContext.Server.MapPath("~/Images/") + newFileName);
 
-                    //if (file != null)
-                    //{
-                    //    newFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
-                    //    imagePath = @"\Images\" + newFileName;
-                    //    file.SaveAs(HttpContext.Server.MapPath("~/Images/") + newFileName);
-
-                    //}
+                    }
 
                     var service = new EmployeeService(HttpContext.GetOwinContext().Get<ApplicationDbContext>());
                     service.CreateEmployee(model.Name, model.Surname, user.Id, null);
