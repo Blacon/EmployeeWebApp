@@ -162,17 +162,21 @@ namespace EmployeeWebApp.Controllers
 
                 if (result.Succeeded)
                 {
+
+                    //Adding picture
                     var newFileName = "";
                     var imagePath = "";
 
                     if (file != null)
                     {
+                        //Adding random letters to the begining of the image name so users can upload pictures with same pictures
                         newFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
                         imagePath = @"\Images\" + newFileName;
+                        //Saving image to "Images" folder
                         file.SaveAs(HttpContext.Server.MapPath("~/Images/") + newFileName);
 
                     }
-
+                    //Creating employee to associate with User
                     var service = new EmployeeService(HttpContext.GetOwinContext().Get<ApplicationDbContext>());
                     service.CreateEmployee(model.Name, model.Surname, user.Id, null);
 
@@ -387,6 +391,7 @@ namespace EmployeeWebApp.Controllers
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
+                    //Creating employee for twitter and facebook user
                     var service = new EmployeeService(HttpContext.GetOwinContext().Get<ApplicationDbContext>());
                     service.CreateEmployee(model.Name, model.Surname, user.Id, null);
 

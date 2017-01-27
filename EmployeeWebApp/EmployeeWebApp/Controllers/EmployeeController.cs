@@ -119,31 +119,7 @@ namespace EmployeeWebApp.Controllers
             return RedirectToAction("Login", "Account");
         }
 
-        public ActionResult Upload()
-        {
-
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Upload(string img, HttpPostedFileBase file)
-        {
-
-
-            var newFileName = "";
-            var imagePath = "";
-
-            if (file != null)
-            {
-                newFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
-                imagePath = @"Images\" + newFileName;
-                file.SaveAs(HttpContext.Server.MapPath("~/Images/") + newFileName);
-
-            }
-
-            return View();
-        }
-
+        //Loading data for datatables
         [Authorize(Roles = "Manager, Administrator")]
         public ActionResult LoadData()
         {
